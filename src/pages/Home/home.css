@@ -56,7 +56,7 @@
   border: 1px solid #ffffff;
   color: #ffffff;
   background-color: transparent;
- }
+}
 
 .homeSection > div > input:focus {
   outline: 1px solid #ffffff;
@@ -65,4 +65,53 @@
 .homeSection > div > input::placeholder {
   color: #ffffff;
   text-align: center;
+}
+
+.newsSection > h1 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #eb9b00;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 50px 0 16px 0;
+}
+
+.newsSection > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ebecee;
+}
+
+.newsSection > div > .books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.newsSection > div > .books > img:hover {
+  scale: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.bookCard {
+  max-width: 550px;
+}
+
+.cardHeader > p {
+  font-weight: 700;
+  font-size: 32px;
+  color: #eb9b00;
+  margin: 0;
 }
