@@ -1,3 +1,4 @@
+/* Estilização da seção principal */
 .homeSection {
   display: flex;
   flex-direction: column;
@@ -58,60 +59,159 @@
   background-color: transparent;
 }
 
-.homeSection > div > input:focus {
-  outline: 1px solid #ffffff;
+/* Responsividade */
+@media (max-width: 1024px) {
+  .homeSection > div {
+    width: 80%;
+  }
+  .homeSection > div > h1 {
+    font-size: 28px;
+  }
 }
 
-.homeSection > div > input::placeholder {
-  color: #ffffff;
-  text-align: center;
+@media (max-width: 768px) {
+  .homeSection {
+    padding: 60px 0;
+  }
+  .homeSection > div {
+    width: 90%;
+  }
+  .homeSection > img.left,
+  .homeSection > img.right {
+    display: none;
+  }
 }
 
+@media (max-width: 480px) {
+  .homeSection {
+    padding: 40px 0;
+  }
+  .homeSection > div > h1 {
+    font-size: 24px;
+  }
+}
+
+/* Estilização da seção de notícias */
 .newsSection > h1 {
   font-weight: 700;
   font-size: 32px;
   color: #eb9b00;
   text-align: center;
-  font-family: "Poppins", sans-serif;
   margin: 50px 0 16px 0;
 }
 
 .newsSection > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
   justify-content: center;
   background-color: #ebecee;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .newsSection > div > .books {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  overflow: hidden;
 }
 
-.newsSection > div > .books > img:hover {
-  scale: 1.2;
+.newsSection > div > .books > img {
+  max-width: min(100%, 300px);
+  max-height: 400px;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .newsSection > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsSection > div > .books {
+    flex-direction: row;
+  }
+
+  .newsSection > div > .books > img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsSection > h1 {
+    font-size: 24px;
+  }
+
+  .newsSection > div > .books {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .newsSection > div > .books > img {
+    max-width: 150px;
+  }
+}
+
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  font-family: "Poppins", sans-serif;
 }
 
-.bookCard {
-  max-width: 550px;
-}
-
-.cardHeader > p {
+.cardHeader p {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 18px;
   color: #eb9b00;
-  margin: 0;
+}
+
+.bookTitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: #002f52;
+}
+
+.bookDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.priceSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #002f52;
+}
+
+.buyButton {
+  background-color: #eb9b00;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buyButton:hover {
+  background-color: #d89000;
 }
